@@ -41,7 +41,10 @@
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
+            this.copy = new DevExpress.XtraBars.BarButtonItem();
+            this.paste = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
+            this.view = new DevExpress.XtraBars.BarButtonItem();
             this.import = new DevExpress.XtraBars.BarButtonItem();
             this.export = new DevExpress.XtraBars.BarButtonItem();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -76,11 +79,8 @@
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
             this.mClear = new DevExpress.XtraEditors.SimpleButton();
-            this.view = new DevExpress.XtraBars.BarButtonItem();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.lbMemory = new System.Windows.Forms.ListBox();
-            this.copy = new DevExpress.XtraBars.BarButtonItem();
-            this.paste = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -200,6 +200,20 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.paste)});
             this.barSubItem2.Name = "barSubItem2";
             // 
+            // copy
+            // 
+            this.copy.Caption = "Copy";
+            this.copy.Id = 10;
+            this.copy.Name = "copy";
+            this.copy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.copy_ItemClick);
+            // 
+            // paste
+            // 
+            this.paste.Caption = "Paste";
+            this.paste.Id = 11;
+            this.paste.Name = "paste";
+            this.paste.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.paste_ItemClick);
+            // 
             // barSubItem3
             // 
             this.barSubItem3.Caption = "History";
@@ -209,6 +223,13 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.import),
             new DevExpress.XtraBars.LinkPersistInfo(this.export)});
             this.barSubItem3.Name = "barSubItem3";
+            // 
+            // view
+            // 
+            this.view.Caption = "View";
+            this.view.Id = 9;
+            this.view.Name = "view";
+            this.view.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.view_ItemClick);
             // 
             // import
             // 
@@ -808,13 +829,6 @@
             this.mClear.Text = "MC";
             this.mClear.Click += new System.EventHandler(this.mClear_Click);
             // 
-            // view
-            // 
-            this.view.Caption = "View";
-            this.view.Id = 9;
-            this.view.Name = "view";
-            this.view.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.view_ItemClick);
-            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(42)))));
@@ -834,26 +848,13 @@
             // 
             this.lbMemory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(42)))));
             this.lbMemory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbMemory.Enabled = false;
             this.lbMemory.ForeColor = System.Drawing.Color.White;
             this.lbMemory.FormattingEnabled = true;
             this.lbMemory.Location = new System.Drawing.Point(3, 3);
             this.lbMemory.Name = "lbMemory";
             this.lbMemory.Size = new System.Drawing.Size(133, 539);
             this.lbMemory.TabIndex = 26;
-            // 
-            // copy
-            // 
-            this.copy.Caption = "Copy";
-            this.copy.Id = 10;
-            this.copy.Name = "copy";
-            this.copy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.copy_ItemClick);
-            // 
-            // paste
-            // 
-            this.paste.Caption = "Paste";
-            this.paste.Id = 11;
-            this.paste.Name = "paste";
-            this.paste.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.paste_ItemClick);
             // 
             // Main
             // 
