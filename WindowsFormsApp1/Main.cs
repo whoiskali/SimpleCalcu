@@ -830,6 +830,7 @@ namespace WindowsFormsApp1
 
         private void mClear_Click(object sender, EventArgs e)
         {
+            mem.Clear();
             operation.MClear();
             lbMemory.Items.Clear();
         }
